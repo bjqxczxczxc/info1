@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>跳转中</title>
+<script>
+const urlList = [
+  "https://pan.quark.cn/s/965c985914a1",
+  "https://pan.quark.cn/s/e892b255d977"
+];
+const target = urlList[Math.floor(Math.random() * urlList.length)];
+location.replace(target);
+</script>
+</head>
+<body style="text-align:center;margin-top:80px;font-size:18px;">
+<p>正在跳转……</p>
+<p>如果没自动跳转：<a id="link">点这里</a></p>
+<script>
+document.getElementById("link").href = target;
+</script>
+</body>
+</html>
